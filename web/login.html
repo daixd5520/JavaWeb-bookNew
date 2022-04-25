@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>猫猫图书馆后台(=^ω^=)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="一个猫猫图书馆" />
+    <meta name="keywords" content="cat,Kitty,图书馆网站" />
+    <meta name="Author" content="dxd />
+    <meta name="CopyRight" content="miow" />
+    <link rel="stylesheet" type="text/css" href="./Style/skin.css" />
+</head>
+    <body>
+        <table width="100%" >
+            <div class="top" style="background:#1D3647;">
+                <!--			<a> 标签中必须提供 href 属性或 name 属性。-->
+                <a id="tfirst"><img src="Images/cat.png" width=70></a> <a style="font-size: 40px;color:#D1F3FF;">&nbsp&nbsp&nbsp--Welcome to Kitty Library--</a>
+            </div>
+            <!-- 主体部分 -->
+            <tr  height="532"    >
+                <!-- 主体左部分 -->
+                <td id="right_cont">
+                    <table height="100%" style="margin-top:4px;margin-left:4px;margin-right:4px;margin-bottom:4px;line-height: 100px;">
+                        <tr height="30%"><td colspan="3">&nbsp;</td></tr>
+                        <tr>
+                            <td width="50%" rowspan="6">&nbsp;</td>
+                            <td valign="top" id="form">
+                                <form id="fmLogin" method="post" action="user.let?type=login">
+                                    <table valign="top" width="40%">
+                                        <tr><td colspan="2"><h4 style="letter-spacing:1px;font-size:20px;">猫猫图书馆</h4></td></tr>
+                                        <tr><td>管理员：</td><td><input type="text" name="name" required style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td></tr>
+                                        <tr><td>密&nbsp;&nbsp;&nbsp;&nbsp;码：</td><td><input type="password" name="pwd" required style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem;"/></td></tr>
+                                        <tr class="bt"><td>&nbsp;</td><td ><input type="submit" value="登录" style="background-color: #1D3647;border-radius:0.5rem 1rem 0.5rem 1rem ;color:white;width:70px;height:40px;"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset" value="重填" style="background-color: #1D3647;border-radius:1rem 0.5rem 1rem 0.5rem ;color:white;width:70px;height:40px;"/></td></tr>
+                                        <!--                                    用户点击登录会触发form表单的action事件-->
+                                    </table>
+                                </form>
+                            </td>
+                            <td rowspan="5">&nbsp;</td>
+                        </tr>
+                        <tr><td colspan="3">&nbsp;</td></tr>
+                    </table>
+                </td>
+                <!-- 主体右部分 -->
+                <td id="left_cont" valign="top" align=="middle" width="200%" height="100%">
+                    <table  style="margin-top:4px;margin-left:4px;margin-right:70px;margin-bottom:7px;">
+                        <tr>
+                            <td width="20%" rowspan="6">
+                                <ul>
+                                    <li><img src="./Images/book.jpg" height="400" style="margin-right: 100px;margin-top: 70px;border-radius:2rem 1rem 2rem 1rem ;"  />&nbsp;<a href="javascript:void(0)"></a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+<!--            &lt;!&ndash; 底部部分 &ndash;&gt;-->
+<!--            <tr id="login_bot" style="background-color: midnightblue"><td colspan="2"><p>Copyright © 2002-2022 dxd</p></td></tr>-->
+        </table>
+    </body>
+<!--<style>-->
+<!--    table.td input{-->
+<!--        height:500px;-->
+<!--    }-->
+<!--</style>-->
+</html>
