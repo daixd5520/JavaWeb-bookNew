@@ -64,6 +64,21 @@ public class MemberDao {
         return count;
     }
 
+    public Member getMember(String name2, String pwd2) throws SQLException {
+
+        // 1.调用DBHelper获取连接对象
+        Connection  conn2 = DBHelper.getConnection();
+        // 2.准备执行的sql语句
+        String sql2="select * from member where name=? and pwd=? ";
+        // 3.调用查询方法,将查询的数据封装成Member
+        Member member = runner.query(conn2,sql2,new BeanHandler<Member>(Member.class),name2,pwd2);
+
+        // 4.关闭连接对象
+        DBHelper.close(conn2);
+
+        // 5.返回user
+        return member;
+    }
     /**
      * 修改押金
      * @param id
@@ -130,6 +145,16 @@ public class MemberDao {
     }
 
     public static void main(String[] args) {
-        MemberDao dao  = new MemberDao();
+//        MemberDao dao  = new MemberDao();
+        Member memberDao = null;
+
+        try {
+            memberDao = new MemberDao().getMember("super","123");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(memberDao);
     }
+
 }

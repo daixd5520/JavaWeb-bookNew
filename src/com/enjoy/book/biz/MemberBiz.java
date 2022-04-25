@@ -73,7 +73,15 @@ public class MemberBiz {
 
     }
     return members;
-
+  }
+  public Member getMember(String name, String pwd){
+    Member  member = null;
+    try {
+      member  = memberDao.getMember(name,pwd);
+    } catch (SQLException throwables) {
+      throwables.printStackTrace();
+    }
+    return member;
   }
   public Member getById(long id){
     Member member = null;

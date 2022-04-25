@@ -50,15 +50,55 @@ public class MemberServlet extends HttpServlet {
         //out
         PrintWriter  out  = resp.getWriter();
         HttpSession session = req.getSession();
-        if(session.getAttribute("user")==null){
-            out.println("<script>alert('请登录');parent.window.location.href='login.html';</script>");
-            return;
-        }
+//        if(session.getAttribute("user")==null){
+//            out.println("<script>alert('查找到user为空,请登录');parent.window.location.href='useLogin.html';</script>");
+//            return;
+//        }
 
         //请求类型
         String type = req.getParameter("type");
         //判断类型
         switch (type){
+            case "login":
+                //1.判读用户请求的类型为login
+                // 2.从login2.html中获取用户名和密码,验证码
+                String name3 = req.getParameter("name");
+                String pwd3 = req.getParameter("pwd");
+//                String userCode = req.getParameter("valcode");
+
+//                //2.2 提取session中的验证码,进行判断
+//                String code =session.getAttribute("code").toString();
+                //不区分大小写
+//                if(!code.equalsIgnoreCase(userCode)){
+//                    out.println("<script>alert('验证码输入错误');location.href = 'login.html';</script>");
+//                    return;
+//                }
+
+
+                // 3.调用UserBiz的getUser方法，根据用户名和密码获取对应的用户对象
+                Member member3= memberBiz.getMember(name3,pwd3);
+
+                // 4.判断用户对象是否为null:
+                if(member3==null){
+                    //  4.1 如果是null表示用户名或密码不正确 ，提示错误，回到登录页面.
+                    out.println("<script>alert('用户名或密码不存在');location.href = 'userLogin.html';</script>");
+                }else {
+                    //  4.2 非空：表示登录成功, 将用户对象保存到session中,提示登录成功后,将页面跳转到index2.jsp
+                    session.setAttribute("member",member3);//user-->Object
+                    out.println("<script>alert('登录成功');location.href='index.jsp';</script>");
+                }
+                break;
+            case "exit":
+                //验证用户是否登录
+                if(session.getAttribute("member")==null){
+                    out.println("<script>alert('没有登录不能退出,请登录!');parent.window.location.href='userLogin.html';</script>");
+                    return;
+                }
+                //1.清除session
+                session.invalidate();
+                //2.跳转到login.html(框架中需要回去)  top.jsp->parent->index.jsp
+                out.println("<script>parent.window.location.href='userLogin.html';</script>");
+                break;
             case "addpre":
                 //获取所有的会员类型
                 List<MemberType> memberTypes = memberTypeBiz.getAll();
