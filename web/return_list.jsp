@@ -143,10 +143,8 @@
                                                 <td width="8%" class="run-right">会员类型:</td>
                                                 <td width="17%"><input class="text" type="text" name="memberId"  value="${member.type.name}"  disabled style="width:70px;height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                 <td width="8%" class="run-right">已借数量</td>
-                                                <%
-                                                    List<Record>  records =(List<Record>)  request.getAttribute("records");
-                                                %>
-                                                <td width="17%"><input class="text" type="text"  name="memberId" value="<%=records.size()%>"  disabled style="width:55px;height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
+<%--                                                 List<Record>  records =(List<Record>)  request.getAttribute("records");--%>
+<%--                                                <td width="17%"><input class="text" type="text"  name="memberId" value="<%=records.size()%>"  disabled style="width:55px;height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>--%>
                                                 <td width="8%" class="run-right">账户余额</td>
                                                 <td width="17%"><input class="text" type="text"  name="memberId" value="${member.balance}"  disabled style="width:55px;height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                             </tr>

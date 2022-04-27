@@ -85,7 +85,7 @@ public class MemberServlet extends HttpServlet {
                 }else {
                     //  4.2 非空：表示登录成功, 将用户对象保存到session中,提示登录成功后,将页面跳转到index2.jsp
                     session.setAttribute("member",member3);//user-->Object
-                    out.println("<script>alert('登录成功');location.href='index.jsp';</script>");
+                    out.println("<script>alert('登录成功');location.href='index2.jsp';</script>");
                 }
                 break;
             case "exit":

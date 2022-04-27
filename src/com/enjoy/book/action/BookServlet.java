@@ -50,10 +50,10 @@ public class BookServlet extends HttpServlet {
 
         //验证用户是否登录
         HttpSession session = req.getSession();
-        if(session.getAttribute("user")==null){
-           out.println("<script>alert('请登录');parent.window.location.href='login.html';</script>");
-           return;
-        }
+//        if(session.getAttribute("user")==null){
+//           out.println("<script>alert('请登录');parent.window.location.href='login.html';</script>");
+//           return;
+//        }
 
 
         String type = req.getParameter("type");
