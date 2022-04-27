@@ -182,18 +182,18 @@
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <!-- 头部开始 -->
             <tr>
-                <td width="17" valign="top" background="./Images/mail_left_bg.gif">
-                    <img src="./Images/left_top_right.gif" width="17" height="29" />
+                <td width="17" valign="top" height="20">
+<%--                    <img src="./Images/left_top_right.gif" width="17" height="29" />--%>
                 </td>
-                <td valign="top" background="./Images/content_bg.gif">
+                <td valign="top" >
                     
                 </td>
-                <td width="16" valign="top" background="./Images/mail_right_bg.gif"><img src="./Images/nav_right_bg.gif" width="16" height="29" /></td>
+                <td width="16" valign="top"></td>
             </tr>
             <!-- 中间部分开始 -->
             <tr>
                 <!--第一行左边框-->
-                <td valign="middle" background="./Images/mail_left_bg.gif">&nbsp;</td>
+                <td valign="middle">&nbsp;</td>
                 <!--第一行中间内容-->
                 <td valign="top" bgcolor="#F7F8F9">
                     <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -203,8 +203,8 @@
                             <td colspan="4">
                                 <table>
                                     <tr>
-                                        <td width="100" align="center"><img src="./Images/mime.gif" /></td>
-                                        <td valign="bottom"><h3 style="letter-spacing:1px;">常用功能 > 图书借阅 </h3></td>
+                                        <td width="100" align="center"><img src="./Images/cat.png" width="60"/></td>
+                                        <td valign="bottom"><h3 style="letter-spacing:1px;font-size: large;">常用功能 >> 图书借阅 </h3></td>
                                     </tr>
                                 </table>
                             </td>
@@ -226,21 +226,21 @@
                                     <table width="100%" border="0" class="cont"  >
                                         <tr>
                                             <td width="8%" class="run-right"> 会员编号</td>
-                                            <td colspan="7"><input class="text" type="text" id="memberId" name="memberId"/> 
-                                                 <input type="button" id="btnQuery" value="确定" style="width: 80px;"/></td>
+                                            <td colspan="7"><input class="text" type="text" id="memberId" name="memberId" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/>
+                                                 <input type="button" id="btnQuery" value="确定" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                            
                                             </td>
                                          
                                         </tr>
                                         <tr>
                                             <td width="8%" class="run-right">会员名称</td>
-                                            <td width="17%"><input class="text" type="text" id="name" disabled/></td>
+                                            <td width="17%"><input class="text" type="text" id="name" disabled style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                             <td width="8%" class="run-right">会员类型:</td>
-                                            <td width="17%"><input class="text" type="text" id="type" disabled/></td>
+                                            <td width="17%"><input class="text" type="text" id="type" disabled style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                             <td width="8%" class="run-right">可借数量</td>
-                                            <td width="17%"><input class="text" type="text" id="amount"  disabled/></td>
+                                            <td width="17%"><input class="text" type="text" id="amount"  disabled style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                             <td width="8%" class="run-right">账户余额</td>
-                                            <td width="17%"><input class="text" type="text" id="balance"  disabled/></td>
+                                            <td width="17%"><input class="text" type="text" id="balance"  disabled style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                         </tr>
                                     </table>
                                 </fieldset>
@@ -265,8 +265,8 @@
                                             <td colspan="8">
                                                
                                                 请输入:&nbsp;&nbsp;<input class="text" type="text" id="bookContent" name="bookContent" placeholder="输入条形码/书名"/>
-                                                <input type="button" id="btnQueryBook" value="确定" style="width: 80px;"/>
-                                                <input type="button" id="btnSubmit" value="完成借阅" style="width: 80px;"/>
+                                                <input type="button" id="btnQueryBook" value="确定" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/>
+                                                <input type="button" id="btnSubmit" value="完成借阅" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/>
                                             </td>
                                          
                                         </tr>
@@ -286,7 +286,7 @@
                                             <form action="" method="">
                                                 <table width="100%"  class="cont tr_color" id="tdBook">
                                                     <tr>
-                                                        <th><input type="checkbox" id="ckAll" checked/>全选/全不选</th>
+                                                        <th><input type="checkbox" id="ckAll" checked style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/>全选/全不选</th>
                                                         <th>书籍名</th>
                                                         <th>借阅时间</th>
                                                         <th>应还时间</th>
@@ -315,25 +315,17 @@
                         <tr>
                             <td width="2%">&nbsp;</td>
                             <td width="51%" class="left_txt">
-                                <img src="./Images/icon_mail.gif" width="16" height="11"> 客户服务邮箱：2087924818@qq.com<br />
+<%--                                <img src="./Images/icon_mail.gif" width="16" height="11"> 客户服务邮箱：2087924818@qq.com<br />--%>
                             </td>
                             <td>&nbsp;</td><td>&nbsp;</td>
                         </tr>
                     </table>
                 </td>
-                <td background="./Images/mail_right_bg.gif">&nbsp;</td>
+                <td >&nbsp;</td>
             </tr>
             <!-- 底部部分 -->
             <tr>
-                <td valign="bottom" background="./Images/mail_left_bg.gif">
-                    <img src="./Images/buttom_left.gif" width="17" height="17" />
-                </td>
-                <td background="./Images/buttom_bgs.gif">
-                    <img src="./Images/buttom_bgs.gif" width="17" height="17">
-                </td>
-                <td valign="bottom" background="./Images/mail_right_bg.gif">
-                    <img src="./Images/buttom_right.gif" width="16" height="17" />
-                </td>           
+
             </tr>
         </table>
     </body>

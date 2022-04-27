@@ -12,18 +12,18 @@
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <!-- 头部开始 -->
             <tr>
-                <td width="17" valign="top" background="./Images/mail_left_bg.gif">
-                    <img src="./Images/left_top_right.gif" width="17" height="29" />
+                <td width="17" valign="top" height="20">
+<%--                    <img src="./Images/left_top_right.gif" width="17" height="29" />--%>
                 </td>
-                <td valign="top" background="./Images/content_bg.gif">
+                <td valign="top">
                     
                 </td>
-                <td width="16" valign="top" background="./Images/mail_right_bg.gif"><img src="./Images/nav_right_bg.gif" width="16" height="29" /></td>
+                <td width="16" valign="top" ></td>
             </tr>
             <!-- 中间部分开始 -->
             <tr>
                 <!--第一行左边框-->
-                <td valign="middle" background="./Images/mail_left_bg.gif">&nbsp;</td>
+                <td valign="middle">&nbsp;</td>
                 <!--第一行中间内容-->
                 <td valign="top" bgcolor="#F7F8F9">
                     <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -33,8 +33,8 @@
                             <td colspan="4">
                                 <table>
                                     <tr>
-                                        <td width="100" align="center"><img src="./Images/mime.gif" /></td>
-                                        <td valign="bottom"><h3 style="letter-spacing:1px;">会员管理 > 会员充值</h3></td>
+                                        <td width="100" align="center"><img src="./Images/cat.png" height="60px"/></td>
+                                        <td valign="bottom"><h3 style="letter-spacing:1px;font-size: large;">会员管理 >> 会员充值</h3></td>
                                     </tr>
                                 </table>
                             </td>
@@ -48,32 +48,32 @@
                             </td>
                         </tr>
                         <!-- 添加产品开始 -->
-                        <tr>
-                            <td width="2%">&nbsp;</td>
-                            <td width="96%">
-                                <table width="100%">
-                                    <tr>
-                                        <td colspan="2">
+                        <tr style="margin:0;">
+                            <td width="2%" style="margin:0;">&nbsp;</td>
+                            <td width="96%" style="margin:0;">
+                                <table width="100%" style="margin:0;">
+                                    <tr style="margin:0;">
+                                        <td colspan="2" style="margin:0;">
                                             <form action="member.let?type=modifyrecharge" method="post">
-                                                <table width="100%"class="cont">
-                                                    <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                <table width="100%" class="cont" style="margin:0;">
+                                                    <tr style="margin:0;">
+                                                        <td width="35%" height=40px >&nbsp;</td>
                                                         <td width="80px">身份证号：</td>
-                                                        <td width="150px"><input class="text" type="text" name="idNumber"  required/></td>
+                                                        <td width="150px"><input class="text" type="text" name="idNumber"  required style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td class="err">*身份证号不存在</td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
-                                                    <tr>
+                                                    <tr style="margin:0;">
                                                         <td width="2%">&nbsp;</td>
                                                         <td width="80px"> 充值金额:</td>
-                                                        <td width="150px"><input class="text" type="number" name="amount" required /></td>
+                                                        <td width="150px"><input class="text" type="number" name="amount" required style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td></td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
-                                                    <tr>
+                                                    <tr style="margin:0;">
                                                         <td width="2%">&nbsp;</td>
                                                         <td width="80px"></td>
-                                                        <td width="150px"><input class="btn" type="submit" value="提交" /></td>
+                                                        <td width="150px"><input class="btn" type="submit" value="提交" style="height:40px;width:80px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td ></td>
                                                         <td width="2%">&nbsp;</td>
                                                         
@@ -97,24 +97,24 @@
                         <tr>
                             <td width="2%">&nbsp;</td>
                             <td width="51%" class="left_txt">
-                                <img src="./Images/icon_mail.gif" width="16" height="11"> 客户服务邮箱：2087924818@qq.com<br />
+<%--                                <img src="./Images/icon_mail.gif" width="16" height="11"> 客户服务邮箱：2087924818@qq.com<br />--%>
                             </td>
                             <td>&nbsp;</td><td>&nbsp;</td>
                         </tr>
                     </table>
                 </td>
-                <td background="./Images/mail_right_bg.gif">&nbsp;</td>
+                <td background=white>&nbsp;</td>
             </tr>
             <!-- 底部部分 -->
             <tr>
-                <td valign="bottom" background="./Images/mail_left_bg.gif">
-                    <img src="./Images/buttom_left.gif" width="17" height="17" />
+                <td valign="bottom" >
+<%--                    <img src="./Images/buttom_left.gif" width="17" height="17" />--%>
                 </td>
-                <td background="./Images/buttom_bgs.gif">
-                    <img src="./Images/buttom_bgs.gif" width="17" height="17">
+                <td background=white>
+<%--                    <img src="./Images/buttom_bgs.gif" width="17" height="17">--%>
                 </td>
-                <td valign="bottom" background="./Images/mail_right_bg.gif">
-                    <img src="./Images/buttom_right.gif" width="16" height="17" />
+                <td valign="bottom" background=white>
+<%--                    <img src="./Images/buttom_right.gif" width="16" height="17" />--%>
                 </td>           
             </tr>
         </table>
