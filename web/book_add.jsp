@@ -39,18 +39,18 @@
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <!-- 头部开始 -->
             <tr>
-                <td width="17" valign="top" background="./Images/mail_left_bg.gif">
+                <td width="17" valign="top" >
                     <img src="./Images/left_top_right.gif" width="17" height="29" />
                 </td>
-                <td valign="top" background="./Images/content_bg.gif">
+                <td valign="top" >
                     
                 </td>
-                <td width="16" valign="top" background="./Images/mail_right_bg.gif"><img src="./Images/nav_right_bg.gif" width="16" height="29" /></td>
+                <td width="16" valign="top" ></td>
             </tr>
             <!-- 中间部分开始 -->
             <tr>
                 <!--第一行左边框-->
-                <td valign="middle" background="./Images/mail_left_bg.gif">&nbsp;</td>
+                <td valign="middle">&nbsp;</td>
                 <!--第一行中间内容-->
                 <td valign="top" bgcolor="#F7F8F9">
                     <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -60,8 +60,8 @@
                             <td colspan="4">
                                 <table>
                                     <tr>
-                                        <td width="100" align="center"><img src="./Images/mime.gif" /></td>
-                                        <td valign="bottom"><h3 style="letter-spacing:1px;">书籍管理 > 添加书籍</h3></td>
+                                        <td width="100" align="center"><img src="./Images/cat.png"  height="60px"/></td>
+                                        <td valign="bottom"><h3 style="letter-spacing:1px;font-size: large;">图书管理 >> 添加图书</h3></td>
                                     </tr>
                                 </table>
                             </td>
@@ -84,84 +84,86 @@
                                             <form action="book.let?type=add" method="post" enctype="multipart/form-data">
                                                 <table width="100%"class="cont">
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="7%">&nbsp;</td>
                                                         <td width="15%">名称：</td>
-                                                        <td width="25%"><input class="text" type="text" name="name" value="" /></td>
+                                                        <td width="25%"><input class="text" type="text" name="name" value="" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td rowspan="9" valign="top" >
-                                                            <fieldset style="width: 210px; height: 360px;">
+                                                            <fieldset style="width: 210px; height: 360px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem;">
                                                              <legend>图片预览</legend>
-                                                             <img id="imgPic" src="#" width="200px" height="350px"/>
+                                                             <img id="imgPic" src="#" width="200px" height="350px" style="border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/>
                                                             </fieldset>
                                                         </td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="7%">&nbsp;</td>
                                                         <td>类型：</td>
                                                         <td width="20%">
+<%--                                                            <a class="btn-select" id="btn_select">--%>
                                                             <select id="book_type"  name="typeId">
-                                                               <option value="0">---请选择---</option>
-                                                                <c:forEach items="${types}" var="t">
-                                                                    <option value="${t.id}">${t.name}</option>
-                                                                </c:forEach>
+                                                                    <option value="0" height="35px" >下拉选择</option>
+                                                                    <c:forEach items="${types}" var="t">
+                                                                        <option value="${t.id}">${t.name}</option>
+                                                                    </c:forEach>
 
                                                             </select>
+<%--                                                            </a>--%>
                                                         </td>
                                                        
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="7%">&nbsp;</td>
                                                         <td>图片：</td>
                                                         <td width="20%"><input type="file" id="pic" name="pic" /></td>
                                                        
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="7%">&nbsp;</td>
                                                         <td>库存量：</td>
-                                                        <td width="20%"><input class="text" style="width:50px;" type="number" name="stock" value="100" /></td>
+                                                        <td width="20%"><input class="text" style="width:50px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;" type="number" name="stock" value="100" /></td>
                                                         
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="7%">&nbsp;</td>
                                                         <td>单价：</td>
-                                                        <td width="20%"><input class="text" style="width:100px;" type="text" name="price"  /></td>
+                                                        <td width="20%"><input class="text" style="width:100px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;" type="text" name="price"  /></td>
                                                         
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="7%">&nbsp;</td>
                                                         <td>出版社：</td>
-                                                        <td width="20%"><input class="text"  type="text" name="publish"/></td>
+                                                        <td width="20%"><input class="text"  type="text" name="publish" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td></td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="7%">&nbsp;</td>
                                                         <td>作者:</td>
-                                                        <td width="20%"><input class="text"  type="text" name="author"/></td>
+                                                        <td width="20%"><input class="text"  type="text" name="author" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td></td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="7%">&nbsp;</td>
                                                         <td>存放地址:</td>
-                                                        <td width="20%"><input class="text"  type="text" name="address"/></td>
+                                                        <td width="20%"><input class="text"  type="text" name="address" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td></td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
                                                         <td>&nbsp;</td>
                                                         <td>简介：</td>
-                                                        <td colspan="2"><textarea cols="150" rows="20" name="desc"></textarea></td>
+                                                        <td colspan="7"><textarea cols="150" rows="20" name="desc" style="border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"></textarea></td>
                                                         <td></td>
                                                     </tr>
                                                     <tr>
                                                         <td>&nbsp;</td>
                                                         <td></td>
-                                                        <td colspan="3"><input class="btn" type="submit" value="提交" /></td>
+                                                        <td colspan="3"><input class="btn" type="submit" value="提交" style="height:40px;border-radius:0.9rem 0.9rem 0.9rem 0.9rem ;"/></td>
                                  
                                                     </tr>
                                                 </table>
@@ -183,24 +185,24 @@
                         <tr>
                             <td width="2%">&nbsp;</td>
                             <td width="51%" class="left_txt">
-                                <img src="./Images/icon_mail.gif" width="16" height="11"> 客户服务邮箱：2087924818@qq.com<br />
+<%--                                <img src="./Images/icon_mail.gif" width="16" height="11"> 客户服务邮箱：2087924818@qq.com<br />--%>
                             </td>
                             <td>&nbsp;</td><td>&nbsp;</td>
                         </tr>
                     </table>
                 </td>
-                <td background="./Images/mail_right_bg.gif">&nbsp;</td>
+                <td background=white>&nbsp;</td>
             </tr>
             <!-- 底部部分 -->
             <tr>
-                <td valign="bottom" background="./Images/mail_left_bg.gif">
-                    <img src="./Images/buttom_left.gif" width="17" height="17" />
+                <td valign="bottom" background=white>
+<%--                    <img src="./Images/buttom_left.gif" width="17" height="17" />--%>
                 </td>
-                <td background="./Images/buttom_bgs.gif">
-                    <img src="./Images/buttom_bgs.gif" width="17" height="17">
+                <td background=white>
+<%--                    <img src="./Images/buttom_bgs.gif" width="17" height="17">--%>
                 </td>
-                <td valign="bottom" background="./Images/mail_right_bg.gif">
-                    <img src="./Images/buttom_right.gif" width="16" height="17" />
+                <td valign="bottom" background=white>
+<%--                    <img src="./Images/buttom_right.gif" width="16" height="17" />--%>
                 </td>           
             </tr>
         </table>

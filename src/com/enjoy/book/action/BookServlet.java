@@ -235,8 +235,6 @@ public class BookServlet extends HttpServlet {
         req.setAttribute("book",book);
         //4.转发到 jsp页面
         req.getRequestDispatcher("book_details.jsp").forward(req,resp);
-
-
     }
 
     /**

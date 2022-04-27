@@ -26,7 +26,7 @@
           <li class="li"><a href="javascript:void(0)">读者管理</a>
             <ul class="nav3">
               <li><a href="./member.let?type=addpre" target="main">读者开卡</a></li>
-              <li><a href="./member.let?type=query" target="main">读者管理</a></li>
+              <li><a href="./member.let?type=query" target="main">读者删改</a></li>
               <li><a href="./mem_recharge.jsp" target="main">读者充值</a></li>
             </ul>
           </li>

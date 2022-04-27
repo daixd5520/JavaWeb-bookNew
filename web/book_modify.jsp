@@ -39,18 +39,18 @@
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
             <!-- 头部开始 -->
             <tr>
-                <td width="17" valign="top" background="./Images/mail_left_bg.gif">
-                    <img src="./Images/left_top_right.gif" width="17" height="29" />
+                <td width="17" valign="top" height="20">
+<%--                    <img src="./Images/left_top_right.gif" width="17" height="29" />--%>
                 </td>
                 <td valign="top" background="./Images/content_bg.gif">
                     
                 </td>
-                <td width="16" valign="top" background="./Images/mail_right_bg.gif"><img src="./Images/nav_right_bg.gif" width="16" height="29" /></td>
+                <td width="16" valign="top" background=white></td>
             </tr>
             <!-- 中间部分开始 -->
             <tr>
                 <!--第一行左边框-->
-                <td valign="middle" background="./Images/mail_left_bg.gif">&nbsp;</td>
+                <td valign="middle" background=white>&nbsp;</td>
                 <!--第一行中间内容-->
                 <td valign="top" bgcolor="#F7F8F9">
                     <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -60,8 +60,8 @@
                             <td colspan="4">
                                 <table>
                                     <tr>
-                                        <td width="100" align="center"><img src="./Images/mime.gif" /></td>
-                                        <td valign="bottom"><h3 style="letter-spacing:1px;">书籍管理 > 修改书籍</h3></td>
+                                        <td width="100" align="center"><img src="./Images/cat.png"  height="60px";/></td>
+                                        <td valign="bottom"><h3 style="letter-spacing:1px;font-size: large;">书籍管理 >> 修改书籍</h3></td>
                                     </tr>
                                 </table>
                             </td>
@@ -84,9 +84,9 @@
                                             <form action="book.let?type=modify" method="post" enctype="multipart/form-data">
                                                 <table width="100%" class="cont">
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="8%">&nbsp;</td>
                                                         <td>编号：</td>
-                                                        <td width="20%"><input class="text" type="text" name="id" value="${book.id}" readonly/></td>
+                                                        <td width="20%"><input class="text" type="text" name="id" value="${book.id}" readonly style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td rowspan="8" valign="top" >
                                                             <fieldset style="width: 210px; height: 370px;">
                                                              <legend>图片预览</legend>
@@ -96,14 +96,14 @@
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="8%">&nbsp;</td>
                                                         <td width="15%">名称：</td>
-                                                        <td width="25%"><input class="text" type="text" name="name" value="${book.name}" /></td>
+                                                        <td width="25%"><input class="text" type="text" name="name" value="${book.name}" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                        
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="8%">&nbsp;</td>
                                                         <td>类型：</td>
                                                         <td width="20%">
                                                             <select id="book_type"  name="typeId">
@@ -123,7 +123,7 @@
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="8%">&nbsp;</td>
                                                         <td>图片：</td>
                                                         <!--
                                                           1.用户不需要修改封面(不会选择图片) filePic.value==>后台 文件名:"" 数据库中应该保存之前的图片路径
@@ -131,56 +131,56 @@
                                                         -->
                                                         <td width="20%">
                                                             <!--保存之前的图片路径  book.pic -->
-                                                          <input type="hidden" name="pic"  value="${book.pic}">
+                                                          <input type="hidden" name="pic"  value="${book.pic} style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"">
                                                             <input type="file" id="filePic" name="filePic"  value="${book.pic}"/>
                                                         </td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="8%">&nbsp;</td>
                                                         <td>库存量：</td>
-                                                        <td width="20%"><input class="text" style="width:50px;" type="number" name="stock" value="${book.stock}" /></td>
+                                                        <td width="20%"><input class="text" style="width:50px;height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;" type="number" name="stock" value="${book.stock}" /></td>
                                                         
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
                                                         <td>单价：</td>
-                                                        <td width="20%"><input class="text" style="width:100px;" type="text" name="price" value="${book.price}" /></td>
+                                                        <td width="20%"><input class="text" style="width:100px;height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;" type="text" name="price" value="${book.price}" /></td>
                                                         
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="8%">&nbsp;</td>
                                                         <td>出版社：</td>
-                                                        <td width="20%"><input class="text"  type="text" name="publish" value="${book.publish}"/></td>
+                                                        <td width="20%"><input class="text"  type="text" name="publish" value="${book.publish}" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td></td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="8%">&nbsp;</td>
                                                         <td>作者:</td>
-                                                        <td width="20%"><input class="text"  type="text" name="author" value="${book.author}"/></td>
+                                                        <td width="20%"><input class="text"  type="text" name="author" value="${book.author}" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td></td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
-                                                        <td width="2%">&nbsp;</td>
+                                                        <td width="8%">&nbsp;</td>
                                                         <td>存放地址:</td>
-                                                        <td width="20%"><input class="text"  type="text" name="address"  value="${book.address}"/></td>
+                                                        <td width="20%"><input class="text"  type="text" name="address"  value="${book.address}" style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td></td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
                                                         <td>&nbsp;</td>
                                                         <td>简介：</td>
-                                                        <td colspan="2"><textarea cols="150" rows="20" name="desc">${book.desc}</textarea></td>
+                                                        <td colspan="8"><textarea cols="150" rows="20" name="desc" style="height:120px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;">${book.desc}</textarea></td>
                                                         <td></td>
                                                     </tr>
                                                     <tr>
                                                         <td>&nbsp;</td>
                                                         <td></td>
-                                                        <td colspan="3"><input class="btn" type="submit" value="提交" /></td>
+                                                        <td colspan="3"><input class="btn" type="submit" value="提交" style="height:40px;width:80px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                     </tr>
                                                 </table>
                                             </form>
@@ -201,13 +201,13 @@
                         <tr>
                             <td width="2%">&nbsp;</td>
                             <td width="51%" class="left_txt">
-                                <img src="./Images/icon_mail.gif" width="16" height="11"> 客户服务邮箱：2087924818@qq.com<br />
+<%--                                <img src="./Images/icon_mail.gif" width="16" height="11"> 客户服务邮箱：2087924818@qq.com<br />--%>
                             </td>
                             <td>&nbsp;</td><td>&nbsp;</td>
                         </tr>
                     </table>
                 </td>
-                <td background="./Images/mail_right_bg.gif">&nbsp;</td>
+<%--                <td background="./Images/mail_right_bg.gif">&nbsp;</td>--%>
             </tr>
             <!-- 底部部分 -->
             <tr>

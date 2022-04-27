@@ -26,20 +26,20 @@
    </script>
 </head>
     <body>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" rules="none">
             <!-- 头部开始 -->
             <tr>
-                <td width="17" valign="top" background="./Images/mail_left_bg.gif">
-                    <img src="./Images/left_top_right.gif" width="17" height="29" />
+                <td width="17" valign="top" height="20" >
+<%--                    <img src="./Images/left_top_right.gif" width="17" height="29" />--%>
                 </td>
-                <td valign="top" background="./Images/content_bg.gif">
+                <td valign="top" background=white>
                 </td>
-                <td width="16" valign="top" background="./Images/mail_right_bg.gif"><img src="./Images/nav_right_bg.gif" width="16" height="29" /></td>
+                <td width="16" valign="top" background=white></td>
             </tr>
             <!-- 中间部分开始 -->
             <tr>
                 <!--第一行左边框-->
-                <td valign="middle" background="./Images/mail_left_bg.gif">&nbsp;</td>
+                <td valign="middle" background=white>&nbsp;</td>
                 <!--第一行中间内容-->
                 <td valign="top" bgcolor="#F7F8F9">
                     <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -49,16 +49,16 @@
                             <td colspan="4">
                                 <table>
                                     <tr>
-                                        <td width="100" align="center"><img src="./Images/mime.gif" /></td>
-                                        <td valign="bottom"><h3 style="letter-spacing:1px;">会员管理 > 添加会员 </h3></td>
+                                        <td width="100" align="center"><img src="./Images/cat.png" height="60px"/></td>
+                                        <td valign="bottom"><h3 style="letter-spacing:1px;font-size: large;">读者管理 >> 读者开卡 </h3></td>
                                     </tr>
                                 </table>
                             </td>
                         </tr>
                         <!-- 一条线 -->
                         <tr>
-                            <td height="40" colspan="4">
-                                <table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+                            <td height="60" colspan="4">
+                                <table width="100%" height="1" border="0" cellpadding="0" cellspacing="0" bgcolor=#f5f5f5>
                                     <tr><td></td></tr>
                                 </table>
                             </td>
@@ -69,32 +69,50 @@
                             <td width="96%">
                                 <table width="100%">
                                     <tr>
-                                        <td colspan="2">
+                                        <td colspan="2" style="border:0px;">
                                             <form action="member.let?type=add" method="post">
-                                                <table width="100%" class="cont">
+                                                <table width="100%" class="cont" style="text-align:center;border:0px;" >
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
-                                                        <td width="10%">用户名：</td>
-                                                        <td width="20%"><input class="text" type="text" name="name" value="" required/></td>
+                                                        <td width="10%">用户名</td>
+                                                        <td width="20%"><input class="text" type="text" name="name" value="" required style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td class="err">长度6~15个字符</td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     </tr>
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
-                                                        <td>密码：</td>
-                                                        <td><input class="text" type="password" name="pwd" value="" required/></td>
+                                                        <td>密码</td>
+                                                        <td><input class="text" type="password" name="pwd" value="" required style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td class="err">必须包含字母和数字，长度6~15位</td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     </tr>
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
-                                                        <td>确认密码：</td>
-                                                        <td><input class="text" type="password" name="pwd2" value="" required/></td>
+                                                        <td>确认密码</td>
+                                                        <td><input class="text" type="password" name="pwd2" value="" required style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/></td>
                                                         <td class="err">两次密码必须一致</td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="2%">&nbsp;</td>
+                                                        <td>电话号码</td>
+                                                        <td>
+                                                            <input class="text" type="tel" name="tel" required style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/>
+                                                        </td>
+                                                        <td></td>
+                                                        <td width="2%">&nbsp;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="2%">&nbsp;</td>
+                                                        <td>身份证号</td>
+                                                        <td>
+                                                            <input class="text" type="text" name="idNumber" required style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/>
+                                                        </td>
+                                                        <td></td>
+                                                        <td width="2%">&nbsp;</td>
                                                     </tr>
                                                     <tr>
                                                         <td width="2%">&nbsp;</td>
@@ -119,33 +137,17 @@
                                                         <td width="2%">&nbsp;</td>
                                                         <td>充值金额</td>
                                                         <td>
-                                                           <input class="text" id="balance" type="number" name="balance" value="100" readonly/>
+                                                           <input class="text" id="balance" type="number" name="balance" value="100" readonly style="height:30px;border-radius:0.7rem 0.7rem 0.7rem 0.7rem ;"/>
                                                         </td>
                                                         <td></td>
                                                         <td width="2%">&nbsp;</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td width="2%">&nbsp;</td>
-                                                        <td>电话号码</td>
-                                                        <td>
-                                                           <input class="text" type="tel" name="tel" required />
-                                                        </td>
-                                                        <td></td>
-                                                        <td width="2%">&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td width="2%">&nbsp;</td>
-                                                        <td>身份证号</td>
-                                                        <td>
-                                                           <input class="text" type="text" name="idNumber" required />
-                                                        </td>
-                                                        <td></td>
-                                                        <td width="2%">&nbsp;</td>
-                                                    </tr>
+
                                                     <tr>
                                                         <td>&nbsp;</td>
                                                         <td></td>
-                                                        <td><input class="btn" type="submit" value="提交" /></td>
+<%--                                                        <td><button class="btn5"  type="submit" value="提交" style="width: 85px;height:40px;"></td>--%>
+                                                        <td><input class="btn" type="submit" value="提交" style="width:90px;height:40px;border-radius:0.9rem 0.9rem 0.9rem 0.9rem ;"/></td>
                                                         <td></td>
                                                         <td>&nbsp;</td>
                                                     </tr>
@@ -168,26 +170,42 @@
                         <tr>
                             <td width="2%">&nbsp;</td>
                             <td width="51%" class="left_txt">
-                                <img src="./Images/icon_mail.gif" width="16" height="11"> 客户服务邮箱：2087924818@qq.com<br />
+                                <br /><br /><br />
                             </td>
                             <td>&nbsp;</td><td>&nbsp;</td>
                         </tr>
                     </table>
                 </td>
-                <td background="./Images/mail_right_bg.gif">&nbsp;</td>
+                <td >&nbsp;</td>
             </tr>
             <!-- 底部部分 -->
             <tr>
-                <td valign="bottom" background="./Images/mail_left_bg.gif">
-                    <img src="./Images/buttom_left.gif" width="17" height="17" />
+                <td valign="bottom" background=white>
+<%--                    <img src="./Images/buttom_left.gif" width="17" height="17" />--%>
                 </td>
-                <td background="./Images/buttom_bgs.gif">
-                    <img src="./Images/buttom_bgs.gif" width="17" height="17">
+                <td background=white>
+<%--                    <img src="./Images/buttom_bgs.gif" width="17" height="17">--%>
                 </td>
-                <td valign="bottom" background="./Images/mail_right_bg.gif">
-                    <img src="./Images/buttom_right.gif" width="16" height="17" />
+                <td valign="bottom" background=white>
+<%--                    <img src="./Images/buttom_right.gif" width="16" height="17" />--%>
                 </td>           
             </tr>
         </table>
     </body>
+<style>
+    body{
+        background-color: #332333;
+    }
+    table
+    {
+        border-collapse: collapse;
+        margin: 0 auto;
+        /*text-align: center;*/
+        border:1px;
+    }
+    table tr{
+        /*text-align: center;*/
+        border:1px;
+    }
+</style>
 </html>
