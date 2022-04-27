@@ -51,12 +51,12 @@
 <%--    </body>--%>
 <div class="container">
     <div class="box">
-        <img src="imgs/img_7.jpg" alt="">
+        <img src="imgs/book100.jpg" alt="">
 <%--        <h2>你好啊！1</h2>--%>
 <%--        <p>hahahahah</p>--%>
     </div>
     <div class="box">
-        <img src="imgs/img_1.jpg" alt="">
+        <img src="imgs/book99.jpg" alt="">
 <%--        <h2>你好啊！6</h2>--%>
 <%--        <p>hahahahah</p>--%>
     </div>
@@ -66,17 +66,17 @@
 <%--        <p>hahahahah</p>--%>
     </div>
     <div class="box">
-        <img src="imgs/img_2.jpg" alt="">
+        <img src="imgs/img_3.jpg" alt="">
 <%--        <h2>你好啊！1</h2>--%>
 <%--        <p>hahahahah</p>--%>
     </div>
     <div class="box">
-        <img src="imgs/img_3.jpg" alt="">
+        <img src="imgs/book98.jpg" alt="">
 <%--        <h2>你好啊！6</h2>--%>
 <%--        <p>hahahahah</p>--%>
     </div>
     <div class="box">
-        <img src="imgs/img_4.jpg" alt="">
+        <img src="imgs/img_27.jpg" alt="">
 <%--        <h2>你好啊！2</h2>--%>
 <%--        <p>hahahahah</p>--%>
     </div>
